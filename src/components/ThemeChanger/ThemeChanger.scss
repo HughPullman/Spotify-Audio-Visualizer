@@ -1,0 +1,24 @@
+.themechanger{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 550px;
+    align-items: center;
+    justify-content: center;
+
+    span{
+        font-size: 28px;
+        color: var(--first-color);
+        font-weight: 500;
+    }
+
+    img{
+        width: 50px;
+        height: 50px;
+        background-color: var(--first-color);
+        border-radius: 10px;
+    }
+}

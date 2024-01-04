@@ -1,0 +1,80 @@
+.selectedPlaylist{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 35px;
+    right: 295px;
+    z-index: 10;
+    width: 500px;
+    height: calc(100vh - 160px);
+    background-color: var(--third-color);
+    border-radius: 15px;
+
+    .maintitle{
+        color: var(--fifth-color);
+        padding: 8px;
+        font-size: 32px;
+        font-weight: 500;
+        position: sticky;
+        padding-left: 15px;
+    }
+    .close{
+        color: var(--first-color);
+        float: right;
+        padding: 5px;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    .tracks{
+        display: flex;
+        flex-direction: column;
+        width: 470px;
+        margin: 15px;
+        gap: 10px;
+        overflow: scroll;
+
+        .song{
+            display: flex;
+            flex-direction: row;
+            padding: 5px 20px;
+            justify-content: space-between;
+            color: var(--fifth-color);
+            border-radius: 10px;
+            background-color: var(--third-color);
+            align-items: center;
+            font-size: 12px;
+            cursor: pointer;
+
+            .left{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                align-items: center;
+                
+
+                .title{
+                    max-width: 325px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .title .artist{
+                    color: var(--fourth-color);
+                }
+
+                img{
+                    width: 45px;
+                    height: 45px;
+                    padding-left: 5px;
+                     
+                }
+            }
+
+        }
+
+        .song:hover{
+            background-color: var(--second-color);
+        }
+    }
+}

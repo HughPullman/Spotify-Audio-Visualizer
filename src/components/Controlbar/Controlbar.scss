@@ -1,0 +1,116 @@
+.controlbar{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    align-items: center;
+    background-color: var(--third-color);
+    padding-top: 15px;
+
+    .volume{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        position: absolute;
+        top:35px;
+        left: 80px;
+        height: 50px;
+
+        .iconVolume{
+            color: var(--fourth-color);
+            padding-top: 3px;
+        }
+        
+        .volumeSlider{
+            width: 120px;
+            color: var(--first-color);
+            height: 5px;
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        .volumeSlider:focus{
+            box-shadow: none !important;
+        }
+
+        .Mui-active{
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .top{
+        display: flex;
+        flex-direction: row;
+        background-color: var(--third-color);
+        width: 50%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    
+        
+        button{
+            border: none;
+            background-color: var(--third-color);
+            cursor: pointer;
+           
+            .iconLarge{
+                color: var(--first-color);
+                font-size: 50px;
+            }
+            .iconSmall{
+                color: var(--fourth-color);
+                font-size: 25px;
+                padding: 0 30px;
+                
+            }
+            .repeatOne{
+                color: var(--first-color);
+                font-size: 10px;
+                z-index: 20;
+                position: absolute;
+                top: 33px;
+                left: 1129px;
+            }
+            
+        }
+
+        button:hover{
+            transform: scale(1.1, 1.1);
+        }
+
+        button:active{
+            transform: scale(0.8, 0.8);
+        }
+
+    }
+
+    .bottom{
+        width: 100%;
+        height: 40px;
+        background-color: var(--third-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .times{
+            color: var(--fifth-color);
+            padding: 0 20px;
+        }
+
+        .musicSlider{
+            width: 700px;
+            color: var(--first-color);
+        }
+
+        .Mui-active{
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+}

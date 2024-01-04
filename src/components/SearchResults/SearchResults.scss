@@ -1,0 +1,112 @@
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: var(--second-color);
+    border-radius: 15px;
+    height: calc(100vh - 405px);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--first-color);
+    border-radius: 10px;
+    width: 2px;
+    opacity: 0.5;
+}
+::-webkit-scrollbar:horizontal{
+    display: none;
+}
+
+.searchResults{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 15px;
+    background-color: var(--third-color);
+    border-radius: 15px;
+    width: 500px;
+    height: calc(100vh - 205px);
+    overflow: scroll;
+    align-items: center;
+
+    .searchTitle{
+        padding-top: 5px;
+        padding-bottom: 10px;
+        position: sticky;
+        background-color: var(--third-color);
+        width: 100%;
+        
+
+        .close{
+            color: var(--first-color);
+            font-size: 32px;
+            cursor: pointer;
+            float: right;
+            padding: 5px 10px;
+        }
+
+        span{
+            color: var(--fifth-color);
+            padding: 10px 25px;
+            font-size: 32px;
+            font-weight: 500;
+        }
+    }
+
+    .songSelector{
+        width: 450px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 15px;
+        align-items: center;
+        cursor: pointer;
+
+        .icon{
+            flex: 1;
+            height: 60px;
+            width: 60px;
+            padding: 5px;
+
+            img{
+                height: 60px;
+                width: 60px;
+                overflow: cover;
+                border-radius: 10px;
+            }
+        }
+
+        .text{
+            flex: 4;
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            overflow: hidden;
+
+            .title{
+                color: var(--fifth-color);
+            }
+            .artist{
+                color: var(--fourth-color);
+            }
+        }
+
+        .time{
+            flex: 1;
+            overflow: hidden;
+            height: 80%;
+            font-size: 12px;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+                color: var(--fifth-color);
+            }
+        }
+    }
+
+    .songSelector:hover{
+        background-color: var(--second-color);
+    }
+
+    
+}

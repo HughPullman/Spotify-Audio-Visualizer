@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    font-family: 'Signika';
+}
+
+:root{
+    --first-color: #1db954;
+    --second-color: #212121;
+    --third-color:#121212;
+    --fourth-color: #b3b3b3;
+    --fifth-color: #ffffff;
+
+}
+
+.App{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--second-color);
+
+}

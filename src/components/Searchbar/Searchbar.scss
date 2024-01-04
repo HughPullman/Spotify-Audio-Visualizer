@@ -1,0 +1,40 @@
+.searchbar{
+    display: flex;
+    flex-direction: row;
+    border-radius: 35px;
+    background-color: var(--fourth-color);
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    .left{
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+        
+        .icon{
+            color: var(--third-color);
+            font-size: 30px;
+        }
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        flex: 9;
+        
+        input{
+            background-color: var(--fourth-color);
+            border: none;
+            width: 93%;
+            padding: 3px;
+            font-size: 20px;
+        }
+        input:focus{
+            outline: none;
+        }
+    }
+}
