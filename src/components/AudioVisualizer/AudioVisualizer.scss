@@ -1,7 +1,32 @@
 .audiovisualizer{
-    z-index: -10;
+    position: absolute;
+    top: 75px;
+
+    .lineBtn{
+        position: absolute;
+        right: 190px;
+    }
+
+    .sphereBtn{
+        position: absolute;
+        right: 50px;
+    }
+
+    button{
+        background-color: var(--first-color);
+        width: 120px;
+        height: 40px;
+        border: none;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 24px;
+        z-index: 999;
+        cursor: pointer;
+        
+    }
     canvas{
-        width: calc(100% - 270px);
-        height: calc(100% - 100px);
+        width: calc(100vw - 270px);
+        height: calc(100vh - 175px);
+        
     }
 }

@@ -16,7 +16,7 @@ const Controlbar = (props) => {
     const [shuffle, setShuffle] = useState(false);
     const [repeat, setRepeat] = useState('off');
     const [play, setPlay] = useState(false);
-    const [volume, setVolume] = useState(51);
+    const [volume, setVolume] = useState(30);
     const [songDuration, setSongDuration] = useState(0);
     const [position, setPosition] = useState(0);
     const [repeatCount, setRepeatCount] = useState(0);
@@ -124,7 +124,7 @@ const Controlbar = (props) => {
     <div className='controlbar'>
         <div className="volume">
                 {volume < 50 ? <VolumeDownIcon className='iconVolume'></VolumeDownIcon> : <VolumeUpIcon className='iconVolume'></VolumeUpIcon>}
-                <Slider  aria-label="Volume"  defaultValue={50} value={volume} onChange={volumeChange} className='volumeSlider'></Slider>
+                <Slider  aria-label="Volume"  defaultValue={25} value={volume} onChange={volumeChange} className='volumeSlider'></Slider>
             </div>
         <div className="top">
             <div className="shuffle">

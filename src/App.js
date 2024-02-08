@@ -22,21 +22,34 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [playbackState, setPlaybackState] = useState({});
   const [playlistUri, setPlaylistUri] = useState('');
+  const [analysis, setAnalysis] = useState([]);
+  const [prevCurrentId, setPrevCurrentId] = useState("");
 
 
   useEffect(() => {
     Spotify.getUserPlaylists().then(setPlaylists);
-    console.log(Spotify.getTrackAudioAnalysis("2L9N0zZnd37dwF0clgxMGI"));
+    console.log(Spotify.getTrackAudioAnalysis("5egqKwgK5r5rvGD1LrtR7J"));
   }, [])
 
   const getData = () =>{
     Spotify.getCurrentlyPlaying().then(setCurrent);
+    
   }
+
+  useEffect(() =>{
+    if(current.id === prevCurrentId){
+      return
+    } else{
+      Spotify.getTrackAudioAnalysis(current.id).then(setAnalysis);
+      setPrevCurrentId(current.id);
+    }
+    
+  },[current.id, prevCurrentId])
 
   useEffect(()=>{
     Spotify.getPlaybackState().then(setPlaybackState);
     if(loading){
-      setInterval(getData, 1000);
+      setInterval(getData, 500);
       setLoading(false)
     } 
   },[]);
@@ -67,7 +80,7 @@ function App() {
     <div className="App">
       <ThemeChanger></ThemeChanger>
       <Searchbar onSearch={search}></Searchbar>
-      <AudioVisualizer></AudioVisualizer>
+      <AudioVisualizer progress={current.progress} analysis={analysis}></AudioVisualizer>
       <Controlbar current={current} playbackState={playbackState}></Controlbar>
       <AlbumCover current={current}></AlbumCover>
       <Playlists playlists={playlists} getPlaylist={getSelectedPlaylist}></Playlists>
